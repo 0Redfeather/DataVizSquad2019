@@ -22,7 +22,7 @@ var tooltip1 = d3.select("body").append("div")
     .style("pointer-events", "none")
     .style("opacity", 0);
 
-d3.json("./data/land-humans.json", function(error, data1) {
+d3.json("./data/us-national-parks.csv", function(error, data1) {
 
   var x1 = d3.scaleLinear()
     .domain([0, 10000000])
