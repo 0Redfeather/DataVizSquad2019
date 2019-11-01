@@ -1,6 +1,6 @@
-var margin1 = {top: 20, right: 20, bottom: 40, left: 40},
-    width1 = 600 - margin1.left - margin1.right,
-    height1 = 400 - margin1.top - margin1.bottom;
+var margin1 = {top: 20, right: 20, bottom: 40, left: 80},
+    width1 = 760 - margin1.left - margin1.right,
+    height1 = 500 - margin1.top - margin1.bottom;
 
 var chart1 = d3.select("#chart1")
     .attr("width", width1 + margin1.left + margin1.right)
