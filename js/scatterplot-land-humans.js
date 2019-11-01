@@ -1,6 +1,6 @@
 var margin1 = {top: 20, right: 20, bottom: 40, left: 40},
-    width1 = 760 - margin1.left - margin1.right,
-    height1 = 500 - margin1.top - margin1.bottom;
+    width1 = 600 - margin1.left - margin1.right,
+    height1 = 400 - margin1.top - margin1.bottom;
 
 var chart1 = d3.select("#chart1")
     .attr("width", width1 + margin1.left + margin1.right)
@@ -25,7 +25,7 @@ var tooltip1 = d3.select("body").append("div")
 d3.json("./data/us-national-parks.json", function(error, data1) {
 
   var x1 = d3.scaleLinear()
-    .domain([0, 10000000])
+    .domain([-500, 8500000])
     .range([0, width1]);
 
   var xAxis1 = chart1.append("g")
@@ -33,7 +33,7 @@ d3.json("./data/us-national-parks.json", function(error, data1) {
     .call(d3.axisBottom(x1));
 
   var y1 = d3.scaleLinear()
-    .domain([0, 11000000])
+    .domain([-500, 11500000])
     .range([height1, 0]);
 
   var yAxis1 = chart1.append("g")
