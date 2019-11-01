@@ -22,7 +22,7 @@ var tooltip1 = d3.select("body").append("div")
     .style("pointer-events", "none")
     .style("opacity", 0);
 
-d3.json("./data/us-national-parks.csv", function(error, data1) {
+d3.json("./data/us-national-parks.json", function(error, data1) {
 
   var x1 = d3.scaleLinear()
     .domain([0, 10000000])
@@ -66,7 +66,7 @@ d3.json("./data/us-national-parks.csv", function(error, data1) {
   scatter1.selectAll(".dot")
       .data(data1)
     .enter().append("circle")
-      .style("fill", "steelblue")
+      .style("fill", "green")
       .style("stroke", "black")
       .attr("class", "dot")
       .attr("r", 5)
@@ -76,7 +76,7 @@ d3.json("./data/us-national-parks.csv", function(error, data1) {
         tooltip1.transition()
           .duration(200)
           .style("opacity", .9);
-        tooltip1.html("Name: " + d["name"] + "<br/> Date Established: " + d["date"] + "<br/> Area: " + d["area"] + "<br/> Visitors: " + d["visitors"])
+        tooltip1.html("National Park: " + d["name"] + "<br/>Date Established: " + d["year"] + "<br/>Area: " + d["area"] + " acres<br/> Visitors: " + d["visitors"])
           .style("left", (d3.event.pageX + 5) + "px")
           .style("top", (d3.event.pageY - 28) + "px");
       })
