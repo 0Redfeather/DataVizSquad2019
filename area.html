@@ -67,51 +67,43 @@
               <span class="section-heading-lower">Coffees &amp; Teas</span>
             </h2>
             
-            
+<!DOCTYPE HTML>
+<html>
+<head>
+<script src="data/CHI_averageacrebytimeperiod.csv"></script>
+<script type="text/javascript">
 
-<canvas id="myChart" src="data/CHI_averageacrebytimeperiod.csv" width="400" height="400"></canvas>
-<script>
- ctx = document.getElementById('myChart').getContext('2d');
-Timeline myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',D
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                }
-            }]
-        }
-    }
-});
+window.onload = function () {
+	var chart = new CanvasJS.Chart("chartContainer", {
+		title:{
+			text: "Testing Chart Code for first time"              
+		},
+		data: [              
+		{
+			// Change type to "doughnut", "line", "splineArea", etc.
+			type: "column",
+			dataPoints: [
+				{ label: "1870-1889",  y: 2,219,790.71  },
+				{ label: "1890-1909", y: 278,645.31  },
+				{ label: "1910-1929", y: 686,224.96  },
+				{ label: "1930-1949",  y: 765,430.19  },
+				{ label: "1950-1969",  y: 217,346.66  },
+        { label: "1970-1989", y: 1,821,443.41 },
+				{ label: "1990-2009", y: 564,670.96  },
+				{ label: "2010-2019",  y: 14,075.66  }
+			]
+		}
+		]
+	});
+	chart.render();
+}
 </script>
-
-     
-            
+</head>
+<body>
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+</body>
+</html>
+       
           </div>
         </div>
         <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="img/products-01.jpg" alt="">
