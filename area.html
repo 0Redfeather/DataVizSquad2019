@@ -19,6 +19,7 @@
 
   <!-- Custom styles for this template -->
   <link href="css/business-casual.min.css" rel="stylesheet">
+  <script src='Chart.min.js'></script>
 
 </head>
 
@@ -72,16 +73,6 @@
 
  <!--putting in js for bar chart-->
 
- <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>Chart.js demo</title>
-        <!-- import plugin script -->
-        <script src='Chart.min.js'></script>
-    </head>
-    <body>
-        <!-- bar chart canvas element -->
         <canvas id="income" width="600" height="400"></canvas>
         <script>
 
@@ -107,9 +98,7 @@
             // draw bar chart
             new Chart(income).Bar(barData);
         </script>
-    </body>
-</html>
-
+ 
 
             </div>
           </div>
