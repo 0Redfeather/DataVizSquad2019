@@ -107,6 +107,17 @@
               <p class="mb-0">Worst case scenario, you can look up the data yourself.</p>
               <br>
                <div id="wdr-component"></div>
+               <script>
+             var pivot = new WebDataRocks({
+              container: "#wdr-component",
+              toolbar: false,
+              report: {
+                dataSource: {
+                  filename: "timeline_data.json"
+                }
+              }
+             });
+             </script>
             </div>
           </div>
         </div>
@@ -125,17 +136,7 @@
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- React Script -->
-  <script>
-var pivot = new WebDataRocks({
-	container: "#wdr-component",
-	toolbar: false,
-	report: {
-		dataSource: {
-			filename: "timeline_data.json"
-		}
-	}
-});
-</script>
+
 
 </body>
 
