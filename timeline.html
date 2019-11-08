@@ -123,12 +123,16 @@
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- React Script -->
-  <script type="text/babel">
-	ReactDOM.render(
-		<WebDataRocksReact.Pivot report="https://docs.google.com/spreadsheets/d/1ket-ZzbzreQAuE0DkZ4NhJIDa4Y60BAHgA1k-BThjGU/edit#gid=0"/>,
-		document.getElementById("wdr-component"), console.log("React component was successfully rendered")
-	);
-</script>
+  <script>
+var pivot = new WebDataRocks({
+	container: "#wdr-component",
+	toolbar: true,
+	report: {
+		dataSource: {
+			filename: "timeline_data.json"
+		}
+	}
+});
 
 </body>
 
