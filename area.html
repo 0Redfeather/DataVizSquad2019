@@ -73,7 +73,7 @@
               <p>Introduction section for bar chart section.</p>
               <p class="mb-0">Summary of Bar Chart's findings.</p>
 
-              <!--putting in js for bar chart-->
+              <!--putting in js for bar chart
               <canvas id="income" width="600" height="400"></canvas>
               <script>
 
@@ -97,8 +97,47 @@
                   var income = document.getElementById("income").getContext("2d");
                   // draw bar chart
                   new Chart(income).Bar(barData);
-              </script>
+              </script> -->
 
+              <script>
+                <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+window.onload = function () {
+	
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	
+	title:{
+		text:"Area Changes Over Time"
+	},
+	axisX:{
+		interval: 1
+	},
+	axisY2:{
+		interlacedColor: "rgba(1,77,101,.2)",
+		gridColor: "rgba(1,77,101,.1)",
+		title: "Area in Arces"
+	},
+	data: [{
+		type: "bar",
+		name: "area",
+		axisYType: "secondary",
+		color: "#014D65",
+		dataPoints: [
+			{ y: 14075, label: "2010-2019" },
+			{ y: 564670, label: "1990-2009" },
+			{ y: 1821443, label: "1970-1989" },
+			{ y: 217347, label: "1950-1969"},
+			{ y: 765430, label: "1930-1949" },
+			{ y: 686225, label: "1910-1929" },
+			{ y: 278645, label: "1890-1909" },
+			{ y: 2219791, label: "1870-1889" }
+		]
+	}]
+});
+chart.render();
+
+}
+</script>
 
             </div>
           </div>
