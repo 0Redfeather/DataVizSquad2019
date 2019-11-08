@@ -32,13 +32,6 @@ d3.json("./data/us-national-parks.json", function(error, data1) {
     .attr("transform", "translate(0," + height1 + ")")
     .call(d3.axisBottom(x1));
 
-  var xtext1 = chart1.append("text")
-    .attr("transform",
-          "translate(" + (width/2) + " ," +
-                         (height + margin.top + 20) + ")")
-    .style("text-anchor","middle")
-    .text("Area (acres)");
-
   var y1 = d3.scaleLinear()
     .domain([-500, 11500000])
     .range([height1, 0]);
